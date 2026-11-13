@@ -175,3 +175,49 @@ mark.hl.on{background-size:100% 100%}
 
 .shot .hero{min-height:900px}
 .shot .pcard{position:relative;top:0}
+
+/* VCIS hanging award */
+.hero__wall{position:relative;z-index:2;justify-self:center;display:flex;flex-direction:column;align-items:center}
+.hero__wall .card-photo{justify-self:auto}
+.award{position:absolute;z-index:3;left:-130px;top:-90px;width:240px;display:block;transform-origin:50% 8px;animation:sway 6s ease-in-out infinite;filter:drop-shadow(0 26px 30px rgba(12,31,74,.28))}
+.award:hover{animation-play-state:paused}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.award__string{display:block;width:180px;height:52px;margin:0 auto -4px;overflow:visible}
+.award__string path{fill:none;stroke:#8a7a5c;stroke-width:1.5}
+.award__string circle{fill:#5d6577;stroke:#2e3442;stroke-width:2}
+.award__frame{display:block;padding:12px;background:linear-gradient(135deg,#1a2a5e,#0c1f4a 40%,#22357a 60%,#0c1f4a);border-radius:4px;box-shadow:inset 0 0 0 2px rgba(255,224,102,.55),inset 0 0 0 5px #0c1f4a,inset 0 0 0 6px rgba(255,224,102,.35)}
+.award__paper{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:18px 16px 20px;background:radial-gradient(circle at 50% 30%,#fffdf6,#f3ead6);border:1px solid rgba(201,163,90,.5);outline:1px solid rgba(201,163,90,.35);outline-offset:-7px}
+.award__seal{width:74px;height:auto;margin-bottom:2px}
+.award__seal .rib{fill:var(--cobalt)}
+.award__seal .rib--r{fill:var(--cobalt-deep)}
+.award__seal .seal-burst circle{fill:#e9c45a;stroke:#c99b2e;stroke-width:3;stroke-dasharray:4 3}
+.award__seal .seal-ring{fill:#f4d778;stroke:#b8862a;stroke-width:1.5}
+.award__seal .laurel{fill:none;stroke:#9a6f1c;stroke-width:2;stroke-linecap:round}
+.award__seal .seal-txt{font:italic 600 19px Fraunces,serif;fill:#0c1f4a;letter-spacing:.5px}
+.award__kick{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:#9a6f1c}
+.award__title{font-family:var(--serif);font-size:19px;line-height:1.1;color:var(--ink)}
+.award__title em{font-size:17px}
+.award__org{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:4px}
+.award:hover .award__frame{box-shadow:inset 0 0 0 2px rgba(255,224,102,.9),inset 0 0 0 5px #0c1f4a,inset 0 0 0 6px rgba(255,224,102,.6)}
+@media(max-width:1100px){.hero__lede{max-width:440px}.award{left:-60px;top:-80px;width:200px}.award__title{font-size:16px}.award__title em{font-size:15px}}
+@media(max-width:860px){.hero__wall{width:100%}.award{position:relative;left:auto;top:auto;margin:0 auto 40px;width:240px}}
+@media (prefers-reduced-motion:reduce){.award{animation:none}}
+
+.award__top{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--cobalt);padding:5px 10px;border-radius:999px;margin-top:4px}
+/* honour band */
+.honour{position:relative;display:grid;grid-template-columns:260px 1fr;gap:64px;align-items:center;padding:110px var(--g);background:var(--cobalt);color:var(--paper);overflow:hidden}
+.honour::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 50%,rgba(255,224,102,.22),transparent 45%),repeating-linear-gradient(to bottom,transparent 0 47px,rgba(255,255,255,.06) 47px 48px);pointer-events:none}
+.honour .label{color:var(--hl)}
+.honour h2{font-size:clamp(40px,5.6vw,84px);position:relative}
+.honour h2 em{color:var(--hl)}
+.honour__lede{margin-top:26px;max-width:640px;font-size:18px;color:rgba(244,239,230,.86);position:relative}
+.honour__lede b{color:#fff}
+.honour__seal{width:260px;height:260px;position:relative;filter:drop-shadow(0 20px 40px rgba(0,0,0,.25))}
+.honour__seal .hs-out{fill:#f4d778;stroke:#b8862a;stroke-width:2;stroke-dasharray:6 4}
+.honour__seal .hs-ring{font:500 11.5px "IBM Plex Mono",monospace;letter-spacing:2.2px;fill:#0c1f4a}
+.honour__seal .hs-in{fill:#0c1f4a;stroke:#ffe066;stroke-width:2}
+.honour__seal .hs-big{font:italic 600 34px Fraunces,serif;fill:#ffe066}
+.honour__seal .hs-small{font:500 12px "IBM Plex Mono",monospace;letter-spacing:3px;fill:#f4efe6}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:860px){.honour{grid-template-columns:1fr;gap:36px;padding:80px var(--g)}.honour__seal{width:180px;height:180px}}
+.honour__seal .rot{transform-origin:100px 100px;animation:spin 40s linear infinite}
