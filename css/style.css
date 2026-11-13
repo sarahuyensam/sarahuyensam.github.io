@@ -237,4 +237,4 @@ mark.hl.on{background-size:100% 100%}
 .btn--ghost{background:transparent;color:var(--paper);border:1px solid rgba(244,239,230,.4)}
 .btn--ghost:hover{border-color:var(--hl);color:var(--hl)}
 .contact__links{flex-wrap:wrap}
-.slogan__tag{right:-90px}
+@media(min-width:861px){.slogan__tag{right:-90px}}
