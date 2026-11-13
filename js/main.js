@@ -48,7 +48,9 @@
   if (hasGsap && !reduce) {
     /* hero entrance */
     gsap.from('.hero__name .line > span', { yPercent: 110, duration: 1.2, ease: 'expo.out', stagger: 0.12, delay: 0.15 });
-    gsap.from('.hero__kick, .hero__lede, .hero__meta', { y: 24, opacity: 0, duration: 1, ease: 'power3.out', stagger: 0.1, delay: 0.5 });
+    gsap.from('.slogan__a, .slogan__b', { y: 30, opacity: 0, duration: 1, ease: 'power3.out', stagger: 0.25, delay: 0.75 });
+    gsap.from('.slogan__tag', { scale: 0, rotate: -40, duration: 0.6, ease: 'back.out(2.4)', delay: 1.6 });
+    gsap.from('.hero__kick, .hero__meta', { y: 24, opacity: 0, duration: 1, ease: 'power3.out', stagger: 0.1, delay: 0.5 });
     gsap.from('.card-photo', { y: 80, rotate: 14, opacity: 0, duration: 1.4, ease: 'expo.out', delay: 0.35 });
     gsap.from('.award', { yPercent: -160, opacity: 0, duration: 1.6, ease: 'bounce.out', delay: 0.9, clearProps: 'transform' });
     gsap.from('.stamp', { scale: 2.4, opacity: 0, duration: 0.5, ease: 'back.out(2)', delay: 1.5 });
