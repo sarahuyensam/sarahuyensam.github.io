@@ -233,4 +233,4 @@ mark.hl.on{background-size:100% 100%}
 .slogan__b{position:relative}
 .slogan em{font-style:italic;font-weight:400;color:var(--cobalt)}
 .slogan__tag{position:absolute;right:-74px;top:-14px;font-size:11px;letter-spacing:.12em;color:#fff;background:var(--cobalt);padding:5px 9px;border-radius:999px;transform:rotate(8deg);box-shadow:0 8px 16px -8px rgba(36,73,255,.7)}
-@media(max-width:600px){.slogan__tag{right:-8px;top:-26px}}
+@media(max-width:860px){.slogan__tag{position:relative;right:auto;top:-.9em;margin-left:8px;display:inline-block}}
